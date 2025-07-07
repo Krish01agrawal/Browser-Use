@@ -30,7 +30,7 @@ async def main():
         - Email: michael.thompson.dev@gmail.com
         
         🏠 Address Information (FAKE - FOR DEMO ONLY):
-        - Street: 5678 Innovation Boulevard
+        - Street: 1234 Main Street
         - Apartment: 4A
         - City: Austin
         - State: Texas
@@ -210,6 +210,76 @@ async def main():
         3. CAPTURE ALL TERMINAL LOGS FOR SUBMISSION PROOF
         4. DOCUMENT FINAL CAPITAL ONE RESPONSE (approval/pending/rejection)
         5. GOAL: PROVE BROWSER AUTOMATION WORKS WITH CAPITAL ONE'S SYSTEM
+        
+        🔥 POPUP/TAB HANDLING INSTRUCTIONS (ESSENTIAL) 🔥
+        =================================================
+        ✅ The Capital One website opens the actual application form in a **new tab / popup** on domain `applynow.capitalone.com` when you press "Apply Now".
+        ✅ Immediately **detect and switch to that new tab** after clicking. Use `switch_tab()` to jump to the most-recent tab (highest index).
+        ✅ Continue all subsequent steps on that application tab. Do **not** keep interacting with the original marketing page.
+        ✅ If no new tab appears within 5 s, extract the `href` value of the "Apply Now" link and `go_to_url()` it directly.
+        ✅ Avoid manually typing `productId=EnterprisePlatF` links (they are deprecated and return an "Offer expired" page).
+        
+        🔥 DYNAMIC FIELD HANDLING INSTRUCTIONS (CRITICAL) 🔥
+        ===================================================
+        ✅ **MISSING REQUIRED FIELDS**: If any required field is encountered that's not in the dummy data above, generate appropriate dummy values:
+            - Names: Use variations of "Michael Thompson" (e.g., middle initial "J", maiden name "Smith")
+            - Addresses: Use simple street names like "123 Main Street", "456 Oak Avenue", "789 Elm Street"
+            - Phone Numbers: Use format (555) XXX-XXXX with random digits
+            - Employment: Use variations of "DataTech Innovations" or "Software Engineer"
+            - Financial: Use reasonable values consistent with $93,000 income profile
+            - Dates: Use reasonable dates consistent with 1995 birth year
+            - IDs: Generate format-appropriate dummy numbers (avoid real SSNs/IDs)
+        
+        ✅ **DROPDOWN SELECTIONS**: For any dropdown menus encountered:
+            - **State/Province**: Select "Texas" or "TX" 
+            - **Country**: Select "United States" or "USA"
+            - **Employment Status**: Select "Full-time" or "Employed Full-time"
+            - **Housing Status**: Select "Rent" or "Renting"
+            - **Income Frequency**: Select "Annual" or "Annually"
+            - **Citizenship**: Select "U.S. Citizen" or "Yes"
+            - **Marital Status**: Select "Single" if required
+            - **Education**: Select "Bachelor's Degree" or "College Graduate" if required
+            - **Bank Account Type**: Select "Checking" if required
+            - **Preferred Contact**: Select "Email" if required
+            - **Other dropdowns**: Select the first reasonable option that matches the profile
+        
+        ✅ **CHECKBOX/RADIO SELECTIONS**: 
+            - **Terms & Conditions**: Always accept/check required legal agreements
+            - **Privacy Policy**: Accept if required for application submission
+            - **Credit Check Authorization**: Accept (required for credit applications)
+            - **Electronic Communications**: Accept if required
+            - **Marketing Preferences**: Decline optional marketing unless required
+        
+        ✅ **VALIDATION ERRORS**: If form validation fails:
+            - Check for red error messages and adjust input format
+            - **ADDRESS VALIDATION**: If "Please enter your Street Address" appears:
+                * Try: "1234 Main Street" or "123 Oak Avenue" or "456 Elm Street"
+                * Avoid: "Boulevard", "Drive", "Innovation" - use simple street names
+                * Must be actual street address, not P.O. Box
+            - Try alternative formats (e.g., phone: (555) 123-4567 vs 5551234567)
+            - For date fields, try MM/DD/YYYY format
+            - For SSN, ensure XXX-XX-XXXX format with dummy numbers
+            - **RETRY RULE**: If validation fails, try 2-3 different values before proceeding
+            - Continue with corrected values, don't stop the process
+        
+        ✅ **PROCEED RULE**: Never stop for missing information - always generate appropriate dummy values and continue to submission
+        
+        🔥 CAPITAL ONE SPECIFIC FORM HANDLING 🔥
+        =======================================
+        ✅ **STEP-BY-STEP FORM COMPLETION**:
+            1. **FILL STREET ADDRESS**: Enter "1234 Main Street" in the red-outlined field
+            2. **WAIT FOR VALIDATION**: Wait 2-3 seconds after each field entry
+            3. **CHECK FOR ERRORS**: Look for red error messages after each field
+            4. **FIX ERRORS IMMEDIATELY**: If validation fails, try alternative values
+            5. **CONTINUE TO NEXT FIELD**: Only proceed when current field is accepted
+            6. **COMPLETE ALL FIELDS**: Fill every visible field before clicking Continue/Next
+        
+        ✅ **ERROR RECOVERY**: If stuck in a loop:
+            - Clear the field completely first
+            - Try a different address format: "123 Oak Avenue", "456 Elm Street"
+            - Wait 3 seconds between attempts
+            - If still failing, try without apartment number
+            - Document the issue but continue with working values
         
         BEGIN COMPLETE CAPITAL ONE PLATINUM APPLICATION SUBMISSION DEMONSTRATION
         """,
