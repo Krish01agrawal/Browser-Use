@@ -1,154 +1,129 @@
 from browser_use import Agent
 from browser_use.llm import ChatOpenAI
 import asyncio
+import time
 
 async def main():
-    # 🎯 DEMONSTRATION SUBMISSION MODE - SHOW COMPLETE PROCESS
-    ENABLE_DEMO_SUBMISSION = True   # Show full submission process
-    USE_DUMMY_DATA = True           # Keep using safe dummy data
+    print("🎯 CAPITAL ONE CREDIT CARD APPLICATION (IMPROVED VERSION)")
+    print("🛡️ Enhanced with loop prevention and better error handling")
+    print("📊 Using dummy data for demonstration purposes")
+    input("\nPress Enter to start the improved automation...")
     
-    print("🎯 DEMONSTRATION MODE: COMPLETE APPLICATION SUBMISSION")
-    print("🛡️ Using DUMMY DATA for safe demonstration")
-    print("📊 You will see full terminal output + website submission confirmation")
-    print("⚠️ NOTE: This creates a real application with fake data for demo purposes")
-    print("🔍 Purpose: Prove automation can handle complete end-to-end process")
-    input("\nPress Enter to proceed with DEMO SUBMISSION or Ctrl+C to cancel...")
+    start_time = time.time()
     
     agent = Agent(
-        task=f"""
-        CREDIT CARD APPLICATION - COMPLETE SUBMISSION DEMONSTRATION
-        ===========================================================
+        task="""
+        ENHANCED CAPITAL ONE CREDIT CARD APPLICATION AUTOMATION
+        ======================================================
         
-        🎯 MISSION: DEMONSTRATE FULL END-TO-END APPLICATION SUBMISSION
-        📊 STATUS: DEMO MODE - Using dummy data to show complete process
-        🔍 GOAL: Prove automation can successfully submit applications
+        🎯 OBJECTIVE: Complete Capital One credit card application with improved error handling
         
-        👤 DUMMY PROFILE FOR DEMONSTRATION:
-        ==================================
-        📋 Personal Information (FAKE - FOR DEMO ONLY):
-        - First Name: Alex
-        - Last Name: Johnson
-        - Date of Birth: 03/15/1999
-        - SSN: 123-45-6789 (DUMMY)
-        - Phone: (555) 123-4567
-        - Email: alex.johnson.dev@gmail.com
-        
-        🏠 Address Information (FAKE - FOR DEMO ONLY):
-        - Street: 1234 Tech Drive
-        - Apartment: 2B
-        - City: San Francisco
-        - State: California
-        - ZIP: 94102
-        - Housing: Rent
-        - Monthly Payment: $2,800
-        
-        💼 Employment Information (FAKE - FOR DEMO ONLY):
-        - Employer: TechCorp Solutions
-        - Job Title: Software Engineer
-        - Work Phone: (555) 987-6543
-        - Years Employed: 3 years 2 months
-        - Annual Income: $95,000
-        - Other Income: $5,000 (Freelance)
-        
-        💰 Financial Information (FAKE - FOR DEMO ONLY):
-        - Total Income: $100,000
-        - Monthly Expenses: $4,500
-        - Existing Credit Cards: Yes, 1 card with $3,000 limit
-        
-        🚀 COMPLETE SUBMISSION EXECUTION PLAN:
-        =====================================
-        
-        📍 PHASE 1: APPLICATION FORM FILLING (Steps 1-25)
-        ------------------------------------------------
-        ✅ Navigate to Discover it Miles application page
-        ✅ Fill all personal information fields
-        ✅ Complete address information section
-        ✅ Enter employment details
-        ✅ Input financial information
-        ✅ Handle terms and conditions
-        
-        📍 PHASE 2: PRE-SUBMISSION VERIFICATION (Steps 26-30)
-        ---------------------------------------------------
-        ✅ Review all entered information for accuracy
-        ✅ Verify all required fields are completed
-        ✅ Check terms and conditions acceptance
-        ✅ Document pre-submission state
-        ✅ Take final application screenshot (if possible)
-        
-        📍 PHASE 3: ACTUAL SUBMISSION PROCESS (Steps 31-35)
-        -------------------------------------------------
-        🔥 STEP 31: LOCATE SUBMIT BUTTON
-        📝 Action: Find and identify the final "Submit Application" button
-        📊 Log: "🎯 SUBMIT BUTTON LOCATED - Ready for submission"
-        
-        🔥 STEP 32: CLICK SUBMIT BUTTON
-        📝 Action: Click the submit button to initiate application submission
-        📊 Log: "🚀 SUBMITTING APPLICATION - Click executed"
-        ⚠️ Status: "APPLICATION SUBMISSION IN PROGRESS..."
-        
-        🔥 STEP 33: HANDLE SUBMISSION PROCESSING
-        📝 Action: Wait for and handle submission processing page
-        📊 Log: "⏳ PROCESSING SUBMISSION - Waiting for response"
-        🎯 Watch for: Loading screens, processing messages, redirects
-        
-        🔥 STEP 34: CAPTURE SUBMISSION CONFIRMATION
-        📝 Action: Identify and document submission confirmation page
-        📊 Log: "✅ SUBMISSION COMPLETED - Capturing confirmation"
-        🎯 Look for: Application reference number, approval/pending status
-        
-        🔥 STEP 35: DOCUMENT FINAL RESULTS
-        📝 Action: Extract and save all submission details
-        📊 Log: "📄 SUBMISSION RESULTS DOCUMENTED"
-        
-        📊 TERMINAL OUTPUT REQUIREMENTS:
-        ===============================
-        Throughout the process, provide clear terminal logging:
-        
-        🔄 Pre-submission: "🛠️ FILLING APPLICATION FORM..."
-        🎯 Ready to submit: "🎯 APPLICATION READY FOR SUBMISSION"
-        🚀 Clicking submit: "🚀 SUBMITTING APPLICATION NOW..."
-        ⏳ Processing: "⏳ SUBMISSION PROCESSING..."
-        ✅ Success: "✅ APPLICATION SUBMITTED SUCCESSFULLY"
-        📄 Results: "📄 SUBMISSION CONFIRMATION RECEIVED"
-        
-        🔍 EXPECTED SUBMISSION OUTCOMES:
-        ===============================
-        
-        ✅ SUCCESSFUL SUBMISSION:
-        - Terminal shows: "✅ APPLICATION SUBMITTED SUCCESSFULLY"
-        - Website shows: Confirmation page with reference number
-        - Result: Demonstration proves automation can submit applications
-        
-        ⚠️ REJECTION/ERROR:
-        - Terminal shows: "⚠️ APPLICATION REJECTED" or "❌ SUBMISSION ERROR"
-        - Website shows: Error message or rejection notice
-        - Result: Still proves submission capability (rejection due to fake data)
-        
-        📊 REQUIRED DOCUMENTATION:
+        ⚠️ CRITICAL IMPROVEMENTS:
         =========================
-        Create comprehensive submission report:
+        1. **LOOP PREVENTION**: Never repeat the same action more than 3 times
+        2. **STATE TRACKING**: Keep track of completed sections to avoid backtracking
+        3. **SMART CHECKBOX HANDLING**: Check if checkbox is already selected before clicking
+        4. **SUBMISSION FOCUS**: Actively search for and click the final submit button
+        5. **TIME LIMITS**: Complete within 10 minutes to avoid session timeout
         
-        - submission_confirmation.md: Full submission results
-        - terminal_log_summary.md: All terminal output captured
-        - website_screenshots.md: Key submission moments (if possible)
-        - automation_proof.md: Evidence automation can submit applications
+        📋 DUMMY DATA TO USE:
+        ====================
+        - Name: Michael Thompson
+        - DOB: 07/22/1995
+        - SSN: 123-45-6789 (DUMMY - NOT REAL)
+        - Phone: (555) 123-4567
+        - Email: test@example.com
+        - Address: 123 Main Street, Austin, TX 78701
+        - Employment: Software Engineer at Tech Corp
+        - Income: $75,000 annually
         
-        🎯 SUCCESS CRITERIA:
-        ===================
-        ✅ Primary Goal: DEMONSTRATE COMPLETE SUBMISSION CAPABILITY
-        ✅ Terminal Evidence: Clear submission status messages
-        ✅ Website Evidence: Submission confirmation or rejection page
-        ✅ Documentation: Comprehensive proof of submission automation
+        🔥 ENHANCED EXECUTION STEPS:
+        ===========================
         
-        🔥 CRITICAL INSTRUCTION:
-        =======================
-        DO NOT STOP AT SUBMISSION BUTTON - COMPLETE THE FULL SUBMISSION
-        GOAL: PROVE BROWSER AUTOMATION CAN HANDLE END-TO-END APPLICATION PROCESS
+        STEP 1: Navigate to Capital One credit card application
+        - Go to capitalone.com credit card section
+        - Click "Apply Now" for any available card
+        - Handle any popups or new tabs
         
-        BEGIN COMPLETE APPLICATION SUBMISSION DEMONSTRATION
+        STEP 2: Fill Personal Information (with validation)
+        - Enter name, DOB, SSN, phone, email
+        - Wait 2 seconds after each field entry
+        - Check for validation errors after each field
+        - If error occurs, try alternative format once
+        
+        STEP 3: Fill Address Information (with validation)
+        - Enter street address, city, state, ZIP
+        - Use simple address format: "123 Main Street"
+        - Avoid complex street names that might fail validation
+        - Handle housing status and monthly payment fields
+        
+        STEP 4: Fill Employment Information (with validation)
+        - Enter employer name, job title, work phone
+        - Select employment status from dropdown
+        - Enter annual income and other income sources
+        - Handle any employer address fields
+        
+        STEP 5: Fill Financial Information (with validation)
+        - Enter total annual income
+        - Fill banking information (checking/savings)
+        - Handle any existing credit accounts
+        - Complete all financial detail fields
+        
+        STEP 6: Handle Terms and Agreements (IMPROVED)
+        - **CRITICAL**: Before clicking any checkbox, check its current state
+        - Only click checkboxes that are NOT already checked
+        - Wait 3 seconds between checkbox clicks
+        - Look for these common checkboxes:
+          * Terms and Conditions
+          * Privacy Policy Agreement
+          * Credit Check Authorization
+          * Electronic Communications
+          * SSN Verification Authorization
+        
+        STEP 7: LOCATE AND CLICK SUBMIT BUTTON (ENHANCED)
+        - **SCROLL TO BOTTOM** of agreements section
+        - **ACTIVELY SEARCH** for submit button with these texts:
+          * "Submit Application"
+          * "Continue"
+          * "Apply Now"
+          * "Review and Submit"
+          * "Next"
+        - **BUTTON DETECTION**: Look for primary/colored buttons
+        - **FORCE SUBMISSION**: If no button found, try pressing Enter key
+        
+        STEP 8: Handle Submission Response
+        - Wait for processing page
+        - Capture confirmation or error messages
+        - Document final result (approval/pending/rejection)
+        
+        🚨 INFINITE LOOP PREVENTION RULES:
+        =================================
+        - **RULE 1**: Never click the same element index more than 3 times
+        - **RULE 2**: If stuck in agreements section for more than 15 actions, force proceed
+        - **RULE 3**: If no progress for 5 consecutive actions, try different approach
+        - **RULE 4**: After 10 minutes total runtime, force complete with current progress
+        - **RULE 5**: If checkbox already appears checked, skip clicking it
+        
+        🔍 SUCCESS INDICATORS:
+        ======================
+        - Application form submitted successfully
+        - Confirmation page displayed
+        - Application reference number received
+        - OR reasonable error message (e.g., "Application rejected due to fake SSN")
+        
+        BEGIN ENHANCED CAPITAL ONE APPLICATION AUTOMATION
         """,
         llm=ChatOpenAI(model="gpt-4o")
     )
-    await agent.run()
+    
+    try:
+        await agent.run()
+        elapsed_time = time.time() - start_time
+        print(f"✅ AUTOMATION COMPLETED in {elapsed_time:.2f} seconds")
+    except Exception as e:
+        elapsed_time = time.time() - start_time
+        print(f"❌ AUTOMATION ERROR after {elapsed_time:.2f} seconds: {e}")
+        print("📊 Check logs above for partial progress details")
 
-asyncio.run(main())
+if __name__ == "__main__":
+    asyncio.run(main())
